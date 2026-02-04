@@ -13,7 +13,9 @@ const UsersPage = async () => {
 
   return (
     <>
-      <ul>{users.map((user) => user.name)}</ul>
+      <ul>
+        
+      </ul>
     </>
   );
 };
