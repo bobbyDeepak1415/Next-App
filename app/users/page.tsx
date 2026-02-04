@@ -13,11 +13,7 @@ const UsersPage = async () => {
 
   return (
     <>
-      <ul>
-        {users.map((user) => {
-          return <li></li>;
-        })}
-      </ul>
+      <ul>{users.map((user) => user.name)}</ul>
     </>
   );
 };
