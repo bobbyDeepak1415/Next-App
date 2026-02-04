@@ -1,11 +1,25 @@
-import React from 'react'
+import axios from "axios";
+import React from "react";
 
-const UsersPage = () => {
-  return (
-    <div>
-      usersPage
-    </div>
-  )
+interface User {
+  id: number;
+  name: string;
 }
 
-export default UsersPage
+const UsersPage = async () => {
+  const response = await fetch("https://jsonplaceholder.typicode.com/users");
+
+  const users: User[] = await response.json();
+
+  return (
+    <>
+      <ul>
+        {users.map((user) => {
+          return <li></li>;
+        })}
+      </ul>
+    </>
+  );
+};
+
+export default UsersPage;
